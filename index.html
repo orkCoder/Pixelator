@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pixelator</title>
+        <link rel="icon" type="image/x-icon" href="img/a-pixelated-logo-with-the-letter-p-free-vector__1_-removebg-preview.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="logo">
+                <div>
+                    Pixelator
+                </div>
+            </div>
+            <div class="setting-input">
+                <form class="input">
+                    <label for="file-input" id="con">Select an image: <input     type="file" id="file-input" accept=".png, .jpeg, .jpg"></   label>
+                    <div class="image" id="image">
+                        <img src="" alt="uploaded-image" id = "uploaded"    style="display: none;">
+                    </div>
+                </form>
+
+                <div class="sliderContainer" id="RangeSlider">
+                    <div></div>
+                    <input type="range" min="1" max="100" value="50" id="inputSlider" class="slider">
+                    <span>
+                        Value:
+                        <span id="sliderValue">
+                            1
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
