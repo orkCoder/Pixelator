@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const image = document.getElementById('uploaded');
     const inputSlider = document.getElementById('inputSlider')
     const sliderValue = document.getElementById('sliderValue')
+    let canvas =  document.getElementById("myCanvas")
+    let ctx = canvas.getContext("2d")
     let range;
 
     imageInput.addEventListener('change', () => {
@@ -14,10 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 reader.onload = function (e) {
                     image.src = e.target.result;
                     image.style.display = 'block'; // Show the image element
+
+                    image.onload = function() {
+                        const aspecRatio = image.width/image.height
+                        let canvasWidth = canvas.clientWidth;
+                        let canvasHeight = canvasWidth/aspecRatio
+
+                        canvas.width = canvasWidth;
+                        canvas.height = canvasHeight;
+                        // Clear the canvas before drawing the new image
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+                        // Draw the image onto the canvas with desired width and height
+                        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                    };
                 };
 
                 reader.readAsDataURL(input.files[0]);
             }
+
         }
 
         // Call readURL function with the selected file input
