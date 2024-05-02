@@ -92,3 +92,19 @@ body {
     background: #04AA6D;
     cursor: pointer;
   }
+
+  .background{
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/360_F_376747823_L8il80K6c2CM1lnPYJhhJZQNl6ynX1yj.jpg);
+  }
+
+  .downloader{
+    background-color: #04AA6D;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }

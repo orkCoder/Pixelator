@@ -19,9 +19,11 @@
                 <form class="input">
                     <label for="file-input" id="con">Select an image: <input     type="file" id="file-input" accept=".png, .jpeg, .jpg"></   label>
                     <div class="image" id="image">
-                        <canvas id="myCanvas">
-                            <img src="" alt="uploaded-image" id = "uploaded"    style="display: none;">
-                        </canvas>
+                        <div class="background">
+                            <canvas id="myCanvas">
+                                <img src="" alt="uploaded-image" id = "uploaded"    style="display: none;">
+                            </canvas>
+                        </div>
                     </div>
                 </form>
 
@@ -35,6 +37,9 @@
                         </span>
                     </span>
                 </div>
+                <button class="downloader">
+                    Download
+                </button>
             </div>
         </div>
     </body>

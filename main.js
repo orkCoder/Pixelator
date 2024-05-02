@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let canvas =  document.getElementById("myCanvas")
     let ctx = canvas.getContext("2d")
     let range;
+    let pixelation;
+
+    inputSlider.addEventListener('input', () => {
+        range = inputSlider.value
+        //console.log(range)
+
+        sliderValue.textContent = range;
+        pixelation = range;
+    });
 
     imageInput.addEventListener('change', () => {
         // Function to read and display the selected image
@@ -41,10 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         readURL(imageInput);
     });
 
-    inputSlider.addEventListener('input', () => {
-        range = inputSlider.value
-        //console.log(range)
-
-        sliderValue.textContent = range;
-    });
 });
+
+function pixelator () {
+    
+}
