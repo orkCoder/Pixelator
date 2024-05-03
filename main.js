@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sliderValue = document.getElementById('sliderValue')
     let canvas =  document.getElementById("myCanvas")
     let ctx = canvas.getContext("2d")
-    let range;
-    let pixelation;
-
+    let range = window.range;
+    let pixelation = window.pixelation;
+    
     inputSlider.addEventListener('input', () => {
         range = inputSlider.value
         //console.log(range)
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         canvas.width = canvasWidth;
                         canvas.height = canvasHeight;
+
                         // Clear the canvas before drawing the new image
                         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
@@ -45,13 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
         }
-
         // Call readURL function with the selected file input
         readURL(imageInput);
     });
 
 });
 
-function pixelator () {
-    
+function isArray ( obj ) {
+    return Object.prototype.toString.call(obj) === "[Object Array]";
+}
+
+function isObject( obj ) {
+    return Object.prototype.toString.call(obj) === "[object Object]"
 }
