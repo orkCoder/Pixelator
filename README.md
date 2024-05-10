@@ -1,5 +1,2 @@
-# Pixelator
-Turns a very well made and a clear image into a more pixelated image for pixel art and that kind of stuff.
-# Calculator
-A very good looking calculator that has all the basic functions
-<img width="597" alt="Screenshot 2024-05-05 at 19 04 52" src="https://github.com/orkCoder/mini-projects/assets/144586372/e8c59c3c-4992-40c9-9dda-dd16ee6797f8">
+# Mini-Projects
+> A list of my mini-projects that i have worked on over the past few months, it has everything ranging from calculators to pixelators and more in between check it out and if you like it give this shit a star
