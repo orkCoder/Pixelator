@@ -1,4 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("canvas");
+  let ctx = canvas.getContext("2d");
+
+  const button = document.getElementById("button");
+  const input = document.getElementById("fileinput")
+
+  button.addEventListener("click", () => {
+    input.click();
+    })
+});
+
+/*document.addEventListener('DOMContentLoaded', () => {
     const imageInput = document.getElementById('file-input');
     const image = document.getElementById('uploaded');
     const inputSlider = document.getElementById('inputSlider')
@@ -58,4 +70,4 @@ function isArray ( obj ) {
 
 function isObject( obj ) {
     return Object.prototype.toString.call(obj) === "[object Object]"
-}
+}*/

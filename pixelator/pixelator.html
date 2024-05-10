@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixelator</title>
+    <link rel="stylesheet" href="/pixelator/pixelator.css" />
+    <script src="/pixelator/pixelator.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Pixelator</h1>
+      <span id="text">
+        Please select an image
+        <input type="file" id="fileinput" style="display: none" />
+        <button id="button"">Import</button>
+      </span>
+      <canvas id="canvas"></canvas>
+      <div id="wrapper-value">      
+        <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+        <span id="value">
+         Value: <span>
+          1
+          </span>
+       </span>
+      </div>
+    </div>
+  </body>
+</html>
