@@ -107,3 +107,27 @@ button{
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.029);     
 }
+
+img {
+    max-width: 300px;
+    height: auto;
+}
+
+#trim {
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+.hover-text span.hover-card {
+    display: none;
+    left: 2rem;
+}
+
+.hover-text:hover span.hover-card {
+    display: flex;
+    position: absolute;
+}
+
+.hover-text {
+    position: relative;
+}
