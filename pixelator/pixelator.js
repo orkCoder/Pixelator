@@ -3,11 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
   let ctx = canvas.getContext("2d");
 
   const button = document.getElementById("button");
-  const input = document.getElementById("fileinput")
+  const input = document.getElementById("fileinput");
+
+  const inputSlider = document.getElementById("myRange");
+  const inputSliderValue = document.getElementById("slider-Value");
+  let pixelation = window.pixelation;
+
+  //input drawn on canvas and input loaded and taken from pc
 
   button.addEventListener("click", () => {
     input.click();
-    })
+  });
+
+  //the pixelation occurs here (down below)
+
+  inputSlider.addEventListener("input", () => {
+    pixelation = inputSlider.value;
+    console.log(pixelation);
+
+    inputSliderValue.textContent = pixelation;
+  });
+
+  input.addEventListener("change", () => {
+    let file = input.files[0];
+    console.log(file);
+    let reader = new FileReader();
+  });
 });
 
 /*document.addEventListener('DOMContentLoaded', () => {
