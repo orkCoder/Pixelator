@@ -1,34 +1,66 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const canvas = document.getElementById("canvas");
-  let ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("canvas");
+    let ctx = canvas.getContext("2d");
+    let canvasWidth = canvas.width;
+    let canvasHeight = canvas.height;
 
-  const button = document.getElementById("button");
-  const input = document.getElementById("fileinput");
+    const button = document.getElementById("button");
+    const input = document.getElementById("fileinput");
 
-  const inputSlider = document.getElementById("myRange");
-  const inputSliderValue = document.getElementById("slider-Value");
-  let pixelation = window.pixelation;
+    const inputSlider = document.getElementById("myRange");
+    const inputSliderValue = document.getElementById("slider-Value");
+    let pixelation = window.pixelation;
 
-  //input drawn on canvas and input loaded and taken from pc
+    //input drawn on canvas and input loaded and taken from pc
 
-  button.addEventListener("click", () => {
-    input.click();
-  });
+    button.addEventListener("click", () => {
+        input.click();
+    });
 
-  //the pixelation occurs here (down below)
+    //the pixelation occurs here (down below)
 
-  inputSlider.addEventListener("input", () => {
-    pixelation = inputSlider.value;
-    console.log(pixelation);
+    inputSlider.addEventListener("input", () => {
+        pixelation = inputSlider.value;
+        console.log(pixelation);
 
-    inputSliderValue.textContent = pixelation;
-  });
+        inputSliderValue.textContent = pixelation;
+    });
 
-  input.addEventListener("change", () => {
-    let file = input.files[0];
-    console.log(file);
-    let reader = new FileReader();
-  });
+    input.addEventListener("change", () => {
+        let file = input.files[0];
+        console.log(file);
+
+        if (file && file.type.startsWith("image/")) {
+            let reader = new FileReader();
+            reader.onload = function (event) {
+                let img = new Image();
+
+                img.onload = function () {
+                    ctx.ImageSmoothingEnabled = true;
+                    ctx.mozImageSmoothingEnabled = true;
+                    ctx.webkitImageSmoothingEnabled = true;
+                    ctx.msImageSmoothingEnabled = true;
+                    ctx.imageSmoothingQuality = "high";
+
+                    let scaleFactor = Math.min(
+                        canvasWidth / img.width,
+                        canvasHeight / img.height
+                    );
+                    let scaledWidth = img.width * scaleFactor;
+                    let scaledHeight = img.height * scaleFactor;
+
+                    let x = (canvasWidth - scaledWidth) / 2;
+                    let y = (canvasHeight - scaledHeight) / 2;
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                    ctx.drawImage(img, x, y, scaledWidth, scaledHeight);
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);x
+        }
+    });
+
 });
 
 /*document.addEventListener('DOMContentLoaded', () => {

@@ -12,8 +12,8 @@ body {
     display: flex;
     flex-direction: column;
 
-    width: 36rem;
-    height: 32rem;
+    width: 42rem;
+    height: 36rem;
     margin: 12px;
     margin-top: 1rem;
 
@@ -95,6 +95,7 @@ h1 {
     margin: 12px;
     margin-right: 0;
     margin-left: 0;
+    height: 24rem;
 
     border-top: 0.1rem solid black;
     border-bottom: 0.1rem solid black;
