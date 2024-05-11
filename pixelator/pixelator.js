@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let img = new Image();
 
                 img.onload = function () {
-                    ctx.ImageSmoothingEnabled = true;
+                    ctx.imageSmoothingEnabled = true;
                     ctx.mozImageSmoothingEnabled = true;
                     ctx.webkitImageSmoothingEnabled = true;
                     ctx.msImageSmoothingEnabled = true;
@@ -57,7 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 };
                 img.src = event.target.result;
             };
-            reader.readAsDataURL(file);x
+            reader.readAsDataURL(file);
+
+            pixelator (canvas, ctx, pixelation)
+        }
+
+        function pixelator (canvas, ctx, pixelSize) {
+            let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            let data = imageData.data;
+            const width = canvas.width;
+            const height = canvas.height;
         }
     });
 
