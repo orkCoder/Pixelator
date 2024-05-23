@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         function pixelator (canvas, ctx, pixelSize) {
             let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
             let data = imageData.data;
+            console.log(data)
             const width = canvas.width;
             const height = canvas.height;
         }
