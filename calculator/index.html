@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientifc Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-</head>
-<body>
-    <div class="blur">
-
-    </div>
-    <div class="container" id="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="menu--mega menu--mega-open background-gradient--tertiary" id="back">
+      <a href="/index.html" id="link"><img src="/img/arrow.png" alt="stuff" id="png"></a>
+      <div class="container" id="container">
         <section id="header">
-            <h1>CALCULATOR</h1>
+          <h1>CALCULATOR</h1>
         </section>
         <div class="calculator">
-            <input type="number" readonly id="display" ng-model="console">
-            <div id="buttons">
-                <div id="erase">
-                    <button id="clearAll">AC</button>
-                    <button id="clear">CE</button>
-                </div>
-                <div id="numbers">
-                    <div id="buttonOne">
-                        <button id="one">1</button>
-                        <button id="two">2</button>
-                        <button id="three">3</button>
-                    </div>
-                    <div id="buttonTwo">
-                        <button id="four">4</button>
-                        <button id="five">5</button>
-                        <button id="six">6</button>
-                    </div>
-                    <div id="buttonThree">
-                        <button id="seven">7</button>
-                        <button id="eight">8</button>
-                        <button id="nine">9</button>
-                    </div>
-                    <div id="buttonFour">
-                        <button id="0">0</button>
-                        <button id="enter">=</button>
-                    </div>
-                </div>
-                <div id="operators">
-                    <button id="plus">+</button>
-                    <button id="minus">-</button>
-                    <button id="times">x</button>
-                    <button id="divide">÷</button>
-                </div>
+          <input type="text" readonly id="display"/>
+          <div id="buttons">
+            <div id="erase">
+              <button id="clearAll">AC</button>
+              <button id="clear">CE</button>
             </div>
+            <div id="numbers">
+              <div id="buttonOne">
+                <button class="number" id="one">1</button>
+                <button class="number" id="two">2</button>
+                <button class="number" id="three">3</button>
+              </div>
+              <div id="buttonTwo">
+                <button class="number" id="four">4</button>
+                <button class="number" id="five">5</button>
+                <button class="number" id="six">6</button>
+              </div>
+              <div id="buttonThree">
+                <button class="number" id="seven">7</button>
+                <button class="number" id="eight">8</button>
+                <button class="number" id="nine">9</button>
+              </div>
+              <div id="buttonFour">
+                <button class="number" id="zero">0</button>
+                <button id="enter">=</button>
+              </div>
+            </div>
+            <div id="operators">
+              <button class="operators" id="plus">+</button>
+              <button class="operators" id="minus">-</button>
+              <button class="operators" id="times">x</button>
+              <button class="operators" id="divide">÷</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
