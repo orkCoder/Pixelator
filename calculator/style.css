@@ -75,6 +75,7 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     outline: none;
+    width: 200px;
 }
 
 #buttons {
@@ -116,4 +117,11 @@ h1 {
 .operators {
     padding: 12px 8px 12px 8px;
     background-color: #817cff;
+}
+
+.erase {
+    background-color: rgb(255, 88, 88);
+    padding: 12px;
+    border-radius: 32px;
+    margin-right: 8px;
 }

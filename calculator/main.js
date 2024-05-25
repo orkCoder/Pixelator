@@ -30,6 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   numbers.one.addEventListener("click", function () {
     console.log("Button one click");
-    input.value += 1;
+    input.value += '1';
+  });
+  numbers.two.addEventListener("click", function () {
+    console.log("Button one click");
+    input.value += '2';
+  });
+  numbers.three.addEventListener("click", function () {
+    console.log("Button one click");
+    input.value += '3';
+  });
+  numbers.four.addEventListener("click", function () {
+    console.log("Button one click");
+    input.value += '4';
+  });
+  numbers.five.addEventListener("click", function () {
+    console.log("Button one click");
+    input.value += '5';
   });
 });
